@@ -5,22 +5,34 @@ import Title from './Title'
 import BucketList from './BucketList'
 import GoalContainer from './GoalContainer'
 
+const TitleWrapper = s.div`
+    flex: 0 1 auto;
+    margin-bottom: 5px;
+`
+
+const ContentWrapper = s.div`
+    flex: 9 1 auto;
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: center;
+`
+
 const BucketListWrapper = s.div`
-    width: 33%;
-    float: left;
+    flex: 1 1 auto;
 `
 
 const GoalContainerWrapper = s.div`
-    width: 66%;
-    float: right;
+    flex: 2 1 auto;
 `
 
 const App = () => {
     return (
         <>
-            <Title />
+            <TitleWrapper>
+                <Title />
+            </TitleWrapper>
 
-            <div>
+            <ContentWrapper>
                 <BucketListWrapper>
                     <BucketList />
                 </BucketListWrapper>
@@ -28,7 +40,7 @@ const App = () => {
                 <GoalContainerWrapper>
                     <GoalContainer />
                 </GoalContainerWrapper>
-            </div>
+            </ContentWrapper>
         </>
     )
 }

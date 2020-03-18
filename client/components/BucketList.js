@@ -1,18 +1,22 @@
 import React from 'react'
 import s from 'styled-components'
 
+const Wrapper = s.div`
+    display: flex;
+    flex-flow: column nowrap;
+`
 const Title = s.h3`
+    flex: initial;
     text-align: center;
-    width: 100%;
 `
 
 const ListContainer = s.div`
-
+    flex: auto;
 `
 
 const BucketList = () => {
     return (
-        <>
+        <Wrapper>
             <Title>Bucket List</Title>
             <ListContainer>
                 <ul>
@@ -21,7 +25,7 @@ const BucketList = () => {
                     <li>pppppppp</li>
                 </ul>
             </ListContainer>
-        </>
+        </Wrapper>
     )
 }
 

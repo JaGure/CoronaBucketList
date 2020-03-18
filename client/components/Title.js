@@ -3,7 +3,7 @@ import s from 'styled-components'
 
 const TitleText = s.h1`
     text-align: center;
-    margin: 0 auto;
+    margin: 0;
 `
 
 const Title = () => {

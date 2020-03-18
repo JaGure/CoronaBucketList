@@ -1,9 +1,13 @@
 * {
-    border: 1px solid black;
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     background-color: #0cf2fa;
 }
 
-div {
-    display: absolute;
+#root {
+    display: flex;
+    flex-flow: column nowrap;
+    height: 95vh;
+    margin: 0;
+    padding: 0;
+    border: 0;
 }
