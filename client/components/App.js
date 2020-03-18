@@ -18,7 +18,8 @@ const ContentWrapper = s.div`
 `
 
 const BucketListWrapper = s.div`
-    flex: 1 1 auto;
+    flex: 1 1 33vw;
+    max-width: 33vw;
 `
 
 const GoalContainerWrapper = s.div`

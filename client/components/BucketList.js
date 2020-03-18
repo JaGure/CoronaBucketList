@@ -12,6 +12,10 @@ const Title = s.h3`
 
 const ListContainer = s.div`
     flex: auto;
+
+    ul {
+        overflow-x: scroll; 
+    }
 `
 
 const BucketList = () => {
@@ -22,7 +26,7 @@ const BucketList = () => {
                 <ul>
                     <li>PP</li>
                     <li>PP</li>
-                    <li>pppppppp</li>
+                    <li>ppasdjkfaslkdjfhalsdjfhalskjdfhlaksdj.fhlaksdjfhalksdjhfalksdjhfalskdjfhalksdjfshalskdjfhalksdjfhalskdjfhalksjd</li>
                 </ul>
             </ListContainer>
         </Wrapper>
