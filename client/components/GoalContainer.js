@@ -2,7 +2,9 @@ import React from 'react'
 import s from 'styled-components'
 
 const Wrapper = s.div`
-    border: 1px solid black;
+    background-color: #f0efeb;
+    border: 1px solid #f0efeb;
+    border-radius: 20px;
     
     h2 {
         text-align: center;
