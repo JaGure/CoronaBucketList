@@ -26,8 +26,24 @@ const ButtonRow = s.div`
     flex-flow: row-reverse nowrap;
 `
 
+const buttonColor = '#c9ffeb';
+const buttonBackgroundColor = '#cbc4cc';
 const AddButton = s.button`
     flex: none;
+
+    background-color: ${buttonBackgroundColor};
+    color: ${buttonColor};
+    border: 2px solid;
+    border-radius: 10px;
+    
+    padding: 0.75em;
+    font-size: 13px;
+
+    &:hover {
+        background-color: ${buttonColor};
+        color: ${buttonBackgroundColor};
+        border-color: ${buttonColor};
+    }
 `
 
 const GoalList = () => {
