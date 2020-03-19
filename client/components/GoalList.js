@@ -1,5 +1,6 @@
 import React from 'react'
 import s from 'styled-components'
+import { GOAL_LIST_BUTTON_COLOR, GOAL_LIST_BUTTON_BACKGROUND_COLOR } from './constants'
 
 const Wrapper = s.div`
     display: flex;
@@ -26,13 +27,11 @@ const ButtonRow = s.div`
     flex-flow: row-reverse nowrap;
 `
 
-const buttonColor = '#c9ffeb';
-const buttonBackgroundColor = '#cbc4cc';
 const AddButton = s.button`
     flex: none;
 
-    background-color: ${buttonBackgroundColor};
-    color: ${buttonColor};
+    background-color: ${GOAL_LIST_BUTTON_BACKGROUND_COLOR};
+    color: ${GOAL_LIST_BUTTON_COLOR};
     border: 2px solid;
     border-radius: 10px;
     
@@ -40,9 +39,9 @@ const AddButton = s.button`
     font-size: 13px;
 
     &:hover {
-        background-color: ${buttonColor};
-        color: ${buttonBackgroundColor};
-        border-color: ${buttonColor};
+        background-color: ${GOAL_LIST_BUTTON_COLOR};
+        color: ${GOAL_LIST_BUTTON_BACKGROUND_COLOR};
+        border-color: ${GOAL_LIST_BUTTON_COLOR};
     }
 `
 

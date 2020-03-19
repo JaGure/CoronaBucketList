@@ -1,10 +1,11 @@
 import React from 'react'
 import s from 'styled-components'
 import GoalList from './GoalList'
+import { GOAL_CONTAINER_BACKGROUND } from './constants'
 
 const Wrapper = s.div`
-    background-color: #f0efeb;
-    border: 1px solid #f0efeb;
+    background-color: ${GOAL_CONTAINER_BACKGROUND};
+    border: 1px solid ${GOAL_CONTAINER_BACKGROUND};
     border-radius: 20px;
     
     h2 {
