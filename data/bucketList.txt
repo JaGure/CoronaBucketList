@@ -1,0 +1,26 @@
+{"bucketList": [
+    { "groupGoals":[
+        { "goalName":"Get In Shape", "children":[
+            { "goalName":"Exercise everyday" },
+            { "goalName":"Eat healthy", "children":[
+                { "goalName":"Luckily my mommy makes me healthy food" }
+            ]}
+        ]},
+        { "goalName":"Don’t fail classes" },
+        { "goalName":"Read a book", "children":[
+            { "goalName":"Bri: Cats: The Movie" },
+            { "goalName":"Jake: Man’s not hot" },
+            { "goalName":"Liam: Naruto (book is an abstract term)", "children":[
+                { "goalName":"Saturdays with the boys" },
+                { "goalName":"The Handmommy’s Tail" }
+            ]}
+        ]}
+    ]},
+    { "liamGoals": [
+        { "goalName":"Pick up some tutees" }
+    ]},
+    { "jakeGoals": [
+        {"goalName":"Figure out Penn Bucket" }
+    ]},
+    { "brianGoals": [] }
+]}
