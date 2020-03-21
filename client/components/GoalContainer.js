@@ -8,6 +8,8 @@ const Wrapper = s.div`
     border: 1px solid ${GOAL_CONTAINER_BACKGROUND};
     border-radius: 20px;
     
+    padding: 4px;
+
     h2 {
         text-align: center;
     }
