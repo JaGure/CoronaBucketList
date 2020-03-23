@@ -54,12 +54,13 @@ const NewGoalText = s.input`
 
     background-color: ${GOAL_LIST_FORM_BACKGROUND_COLOR};
     color: ${GOAL_LIST_FORM_COLOR};
-    border: 1px solid ${GOAL_LIST_TEXT_BORDER_COLOR};
+    border: none;
     ::placeholder {
         color: ${GOAL_LIST_FORM_COLOR};
     }
 
     margin-left: 2px;
+    padding-left: 3px;
 `
 
 const GoalList = () => {
