@@ -20,6 +20,7 @@ const ContentWrapper = s.div`
 const BucketListWrapper = s.div`
     flex: 1 1 33vw;
     max-width: 33vw;
+    margin-right: 5px;
 `
 
 const GoalContainerWrapper = s.div`

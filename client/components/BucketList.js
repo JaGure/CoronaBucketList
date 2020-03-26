@@ -15,6 +15,10 @@ const Title = s.h3`
 const ListContainer = s.div`
     flex: auto;
 
+    & > ul > li {
+        font-weight: bold;
+    }
+
     ul {
         overflow-x: scroll; 
     }
