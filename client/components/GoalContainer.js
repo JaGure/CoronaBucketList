@@ -45,7 +45,7 @@ const GoalListWrapper = () => {
 const GoalContainer = () => {
     return (
         <Wrapper>
-            <h2>Goals</h2>
+            <h2>Goals Accomplished</h2>
             <BodyWrapper>
                 <GoalListRow>
                     <GoalListWrapper />
