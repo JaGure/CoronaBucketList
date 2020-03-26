@@ -2,7 +2,7 @@ const fs = require('fs')
 
 const goalListsFile = './data/goalLists.json'
 
-// async reads the bucketlist, passes it to the next function
+// async reads the goalLists, passes it to the callback function
 const getGoalLists = next => {
     fs.readFile(goalListsFile, 'utf-8', function(err, data){
         if (err) throw err
