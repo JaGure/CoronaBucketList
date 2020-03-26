@@ -2,9 +2,15 @@ import React from 'react'
 import s from 'styled-components'
 
 const ListElement = s.li`
+    flex: auto;
+
     &:hover {
         background-color: green;
     }
+`
+
+const Box = s.li`
+    display: flex;
 `
 
 const ChildList = props => {
@@ -15,7 +21,10 @@ const ChildList = props => {
             <ul>
                 {props.children.map(item => (
                     <>
-                        <ListElement>{item.goalName}</ListElement>
+                        <Box>
+                            <ListElement>{item.goalName}</ListElement>
+                            {/* <button>Add button? Edit buttton? BOTH?!?!</button> */}
+                        </Box>
                         <ChildList children={item.children} />
                     </>
                 ))}
