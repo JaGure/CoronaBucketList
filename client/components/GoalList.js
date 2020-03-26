@@ -2,8 +2,7 @@ import React from 'react'
 import s from 'styled-components'
 import { GOAL_LIST_FORM_COLOR, 
     GOAL_LIST_FORM_BACKGROUND_COLOR, 
-    GOAL_LIST_BUTTON_HOVER_COLOR,
-    GOAL_LIST_TEXT_BORDER_COLOR } from './constants'
+    GOAL_LIST_BUTTON_HOVER_COLOR } from './constants'
 
 const Wrapper = s.div`
     display: flex;

@@ -6,4 +6,3 @@ export const GOAL_CONTAINER_BACKGROUND = '#f0efeb'
 export const GOAL_LIST_FORM_COLOR = '#f5f5f5';
 export const GOAL_LIST_FORM_BACKGROUND_COLOR = '#8edeed';
 export const GOAL_LIST_BUTTON_HOVER_COLOR = '#8fe6f7';
-export const GOAL_LIST_TEXT_BORDER_COLOR = '#d4d4d4';
