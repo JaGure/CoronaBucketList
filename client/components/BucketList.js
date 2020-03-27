@@ -47,8 +47,6 @@ const BucketList = () => {
 
     useEffect(getBucketList, [])
 
-
-
     return (
         <Wrapper>
             <Title>Bucket List</Title>
