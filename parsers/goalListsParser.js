@@ -12,3 +12,7 @@ const getGoalLists = next => {
         next(goalLists)
     });
 }
+
+module.exports = {
+    getGoalLists: getGoalLists
+}
