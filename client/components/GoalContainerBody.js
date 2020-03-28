@@ -11,7 +11,9 @@ const GoalListRow = s.div`
 
 const GoalListWrapperCSS = s.div`
     flex: auto;
+    display: flex;
 `
+
 // each wrapper holds a goal list - allows for different sized list blocks
 const GoalListWrapper = props => {
     return (

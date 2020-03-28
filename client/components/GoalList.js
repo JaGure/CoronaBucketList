@@ -5,6 +5,7 @@ import { GOAL_LIST_FORM_COLOR,
     GOAL_LIST_BUTTON_HOVER_COLOR } from './constants'
 
 const Wrapper = s.div`
+    flex: auto;
     display: flex;
     flex-flow: column nowrap;
     padding: 1px;
