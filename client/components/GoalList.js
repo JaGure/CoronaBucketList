@@ -62,15 +62,15 @@ const NewGoalText = s.input`
     padding-left: 3px;
 `
 
-const GoalList = () => {
+const GoalList = props => {
+    const { name, list } = props
+
     return (
         <Wrapper>
-            <Title>Boio's List</Title>
+            <Title>{name}'s List</Title>
             <ListWrapper>
                 <ul>
-                    <li>asfasfd</li>
-                    <li>afas</li>
-                    <li>adsf</li>
+                    {list.map(item => <li>{item}</li>)}
                 </ul>
             </ListWrapper>
             <InputForm onSubmit={e => e.preventDefault()}>

@@ -1,5 +1,5 @@
 {"goals": [
-    { "listOwner":"Jake", "elements":[] },
-    { "listOwner":"Liam", "elements":[] },
-    { "listOwner":"Brian", "elements":[] }
+    { "listOwner":"Jake", "elements":["asdfasdf", "asddd"] },
+    { "listOwner":"Liam", "elements":["3r34", "Asdfasd", "sasdfadf", "111111"] },
+    { "listOwner":"Brian", "elements":["0a9wieuh"] }
 ]}

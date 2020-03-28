@@ -1,6 +1,6 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import s from 'styled-components'
-import GoalList from './GoalList'
+import GoalContainerBody from './GoalContainerBody'
 import { GOAL_CONTAINER_BACKGROUND } from './constants'
 
 const Wrapper = s.div`
@@ -21,39 +21,34 @@ const BodyWrapper = s.div`
     flex-flow: column nowrap;
 `
 
-// child of the body wrapper. holds the GoalLists
-const GoalListRow = s.div`
-    flex: initial;
-    display: flex;
-    flex-flow: row nowrap;
-`
-
-const GoalListWrapperCSS = s.div`
-    flex: auto;
-`
-// each wrapper holds a goal list - allows for different sized list blocks
-const GoalListWrapper = () => {
-    return (
-        <GoalListWrapperCSS>
-            <GoalList />
-        </GoalListWrapperCSS>
-    )
-}
-
-
-
 const GoalContainer = () => {
+    const [goalLists, setGoalLists] = useState('')
+    const [isLoaded, setIsLoaded] = useState(false)
+    const [error, setError] = useState(null)
+
+    // GET request to backend for goal lists
+    const getGoalLists = () => {
+        fetch('/goal-lists')
+            .then(res => res.json())
+            .then(
+                result => {
+                    setGoalLists(result)
+                    setIsLoaded(true)
+                },
+                error => {
+                    setIsLoaded(true)
+                    setError(error)
+                }
+            )
+    }
+
+    useEffect(getGoalLists, [])
+
     return (
         <Wrapper>
             <h2>Goals Accomplished</h2>
             <BodyWrapper>
-                <GoalListRow>
-                    <GoalListWrapper />
-                    <GoalListWrapper />
-                </GoalListRow>
-                <GoalListRow>
-                    <GoalListWrapper />
-                </GoalListRow>
+                <GoalContainerBody goalLists={goalLists} isLoaded={isLoaded} error={error}/>
             </BodyWrapper>
         </Wrapper>
     )
