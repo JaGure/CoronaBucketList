@@ -66,17 +66,19 @@ const NewGoalText = s.input`
 const GoalList = props => {
     const { name, list } = props
     const [goalList, setGoalList] = useState(list)
+    const [inputText, setInputText] = useState('')
 
     const addItemToList = e => {
         e.preventDefault()
 
         // adds to the component's list, for re-rendering
-        setGoalList(goalList.concat(["test goal"]))
+        setGoalList(goalList.concat([inputText]))
+        setInputText('')
 
         // updates on the list on the backend
         const request = new Request('/goal-lists', {
             method: 'POST', 
-            body: JSON.stringify({listOwner: name, goalToAdd: "test goal"}),
+            body: JSON.stringify({listOwner: name, goalToAdd: inputText}),
             headers: { "Content-Type": "application/json" }
         })
 
@@ -92,7 +94,7 @@ const GoalList = props => {
                 </ul>
             </ListWrapper>
             <InputForm onSubmit={e => addItemToList(e)}>
-                <NewGoalText onChange={e => console.log(e.target.value)} type="text" placeholder="Name..." />
+                <NewGoalText value={inputText} onChange={e => setInputText(e.target.value)} type="text" placeholder="Goal Name..." />
                 <AddButton type="submit" text="Click Me!" />
             </InputForm>
         </Wrapper>
