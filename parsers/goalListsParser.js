@@ -14,10 +14,13 @@ const getGoalLists = next => {
 }
 
 // async updates the goal list of the given list owner by adding the given goal
-const updateGoalLists = function (listOwner, goalToAdd) {
+// if an error occurs, calls the next function and passes it the error, otherwise,
+// calls the next function when finished (without parameters)
+const setGoalLists = function (listOwner, goalToAdd, next) {
     getGoalLists(goalLists => {
         if (typeof(goalToAdd) !== 'string') {
-            console.log("Invalid New Goal Type")
+            next("Invalid New Goal Type")
+            return
         }
 
         let ownerList = []
@@ -31,7 +34,7 @@ const updateGoalLists = function (listOwner, goalToAdd) {
         }
 
         if (ownerIndex === -1) {
-            console.log("Invalid List Owner")
+            next("Invalid List Owner")
             return
         }
 
@@ -41,13 +44,16 @@ const updateGoalLists = function (listOwner, goalToAdd) {
         const goalListsJSON = JSON.stringify({ goals: goalLists })
 
         fs.writeFile(goalListsFile, goalListsJSON, 'utf-8', function (err) {
-            if (err) throw err;
-            console.log('Goal Lists successfully updated!')
+            if (err) {
+                next(err)
+            } else {
+                next()
+            }
         })
     })
 }
 
 module.exports = {
     getGoalLists: getGoalLists,
-    updateGoalLists: updateGoalLists
+    setGoalLists: setGoalLists
 }

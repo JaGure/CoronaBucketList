@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import s from 'styled-components'
 import { GOAL_LIST_FORM_COLOR, 
     GOAL_LIST_FORM_BACKGROUND_COLOR, 
@@ -66,6 +66,18 @@ const NewGoalText = s.input`
 const GoalList = props => {
     const { name, list } = props
 
+    const addItemToList = e => {
+        e.preventDefault()
+
+        const request = new Request('/goal-lists', {
+            method: 'POST', 
+            body: JSON.stringify({listOwner: name, goalToAdd: "test goal"}),
+            headers: { "Content-Type": "application/json" }
+        })
+
+        fetch(request)
+    }
+
     return (
         <Wrapper>
             <Title>{name}'s List</Title>
@@ -74,7 +86,7 @@ const GoalList = props => {
                     {list.map(item => <li>{item}</li>)}
                 </ul>
             </ListWrapper>
-            <InputForm onSubmit={e => e.preventDefault()}>
+            <InputForm onSubmit={e => addItemToList(e)}>
                 <NewGoalText onChange={e => console.log(e.target.value)} type="text" placeholder="Name..." />
                 <AddButton type="submit" text="Click Me!" />
             </InputForm>
