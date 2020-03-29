@@ -65,10 +65,15 @@ const NewGoalText = s.input`
 
 const GoalList = props => {
     const { name, list } = props
+    const [goalList, setGoalList] = useState(list)
 
     const addItemToList = e => {
         e.preventDefault()
 
+        // adds to the component's list, for re-rendering
+        setGoalList(goalList.concat(["test goal"]))
+
+        // updates on the list on the backend
         const request = new Request('/goal-lists', {
             method: 'POST', 
             body: JSON.stringify({listOwner: name, goalToAdd: "test goal"}),
@@ -83,7 +88,7 @@ const GoalList = props => {
             <Title>{name}'s List</Title>
             <ListWrapper>
                 <ul>
-                    {list.map(item => <li>{item}</li>)}
+                    {goalList.map(item => <li>{item}</li>)}
                 </ul>
             </ListWrapper>
             <InputForm onSubmit={e => addItemToList(e)}>
