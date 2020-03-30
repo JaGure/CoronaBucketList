@@ -7,7 +7,7 @@
     "start": "nodemon server.js",
     "prestart": "parcel build ./client/index.html",
     "parcel:dev": "parcel ./client/index.html",
-    "build": "parcel build ./client/index.html && node server.js"
+    "build": "parcel build ./client/index.html && netlify-lambda build server.js"
   },
   "keywords": [],
   "author": "",
@@ -15,12 +15,14 @@
   "dependencies": {
     "body-parser": "^1.19.0",
     "express": "^4.17.1",
+    "netlify-lambda": "^1.6.3",
     "parcel-bundler": "^1.12.4",
     "path": "^0.12.7",
     "react": "^16.13.0",
     "react-dom": "^16.13.0",
     "react-redux": "^7.2.0",
     "redux": "^4.0.5",
+    "serverless-http": "^2.3.2",
     "styled-components": "^5.0.1"
   },
   "nodemonConfig": {
