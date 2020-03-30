@@ -39,11 +39,11 @@ router.post('/goal-lists', (req, res) => {
 
 app.use('/.netlify/functions/server', router);
 
-// starting server
-const port = process.env.PORT || 3000;
-app.listen(port, () => {
-  console.log(`App listening on port ${port}`)
-});
+// // starting server
+// const port = process.env.PORT || 3000;
+// app.listen(port, () => {
+//   console.log(`App listening on port ${port}`)
+// });
 
 module.exports = app;
 module.exports.handler = serverless(app);
