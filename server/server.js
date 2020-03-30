@@ -4,6 +4,7 @@ const path = require('path')
 const bodyParser = require('body-parser')
 const bucketListParser = require('../parsers/bucketListParser')
 const goalListsParser = require('../parsers/goalListsParser')
+const bucketListJSON = require('../data/bucketList.json')
 const serverless = require('serverless-http'); 
 
 const app = express()
