@@ -2,12 +2,12 @@
   "name": "CoronaBucketList",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "server.js",
   "scripts": {
     "start": "nodemon server.js",
     "prestart": "parcel build ./client/index.html",
     "parcel:dev": "parcel ./client/index.html",
-    "build": "parcel build ./client/index.html && netlify-lambda build server.js"
+    "build": "parcel build ./client/index.html && netlify-lambda build server"
   },
   "keywords": [],
   "author": "",
