@@ -1,6 +1,6 @@
 const fs = require('fs')
 
-const goalListsFile = './data/goalLists.json'
+const goalListsFile = './server-local/data/goalLists.json'
 
 // async reads the goalLists, passes it to the callback function
 const getGoalLists = next => {

@@ -6,7 +6,7 @@ const goalListsParser = require('./parsers-local/goalListsParser')
 
 const app = express()
 
-app.use(express.static(path.join(__dirname, 'dist')));
+app.use(express.static(path.join(__dirname, '../dist')));
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
 

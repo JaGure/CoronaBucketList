@@ -1,6 +1,6 @@
 const fs = require('fs')
 
-const bucketListFile = './data/bucketList.json'
+const bucketListFile = './server-local/data/bucketList.json'
 
 // async reads the bucketlist, passes it to the callback function
 const getBucketList = next => {
