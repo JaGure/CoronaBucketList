@@ -10,7 +10,7 @@
     "build": "parcel build ./client/index.html && netlify-lambda build server"
   },
   "keywords": [],
-  "author": "",
+  "author": "Jake Gurevitch",
   "license": "ISC",
   "dependencies": {
     "body-parser": "^1.19.0",
