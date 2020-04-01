@@ -4,7 +4,7 @@
   "description": "",
   "main": "server.js",
   "scripts": {
-    "start": "nodemon server-local.js",
+    "start": "nodemon server-local/server-local.js",
     "prestart": "parcel build ./client/index.html",
     "parcel:dev": "parcel ./client/index.html",
     "build": "parcel build ./client/index.html && netlify-lambda build server"

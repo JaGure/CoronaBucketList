@@ -1,8 +1,8 @@
 const express = require('express')
 const path = require('path')
 const bodyParser = require('body-parser')
-const bucketListParser = require('./parsers/bucketListParser')
-const goalListsParser = require('./parsers/goalListsParser')
+const bucketListParser = require('./parsers-local/bucketListParser')
+const goalListsParser = require('./parsers-local/goalListsParser')
 
 const app = express()
 

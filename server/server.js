@@ -2,8 +2,8 @@
 const express = require('express')
 const path = require('path')
 const bodyParser = require('body-parser')
-const bucketListParser = require('../parsers/bucketListParser')
-const goalListsParser = require('../parsers/goalListsParser')
+const bucketListParser = require('../server-local/parsers-local/bucketListParser')
+const goalListsParser = require('../server-local/parsers-local/goalListsParser')
 const serverless = require('serverless-http'); 
 
 const app = express()
