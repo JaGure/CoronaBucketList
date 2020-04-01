@@ -1,0 +1,116 @@
+{
+    "bucketList": [
+        {
+            "goalGroupName": "Group Goals",
+            "children": [
+                {
+                    "goalName": "Get In Shape",
+                    "children": [
+                        {
+                            "goalName": "Exercise everyday",
+                            "children": []
+                        },
+                        {
+                            "goalName": "Eat healthy",
+                            "children": [
+                                {
+                                    "goalName": "Luckily my mommy makes me healthy food",
+                                    "children": []
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "goalName": "Don’t fail classes",
+                    "children": []
+                },
+                {
+                    "goalName": "Read a book",
+                    "children": [
+                        {
+                            "goalName": "Bri: Cats: The Movie",
+                            "children": []
+                        },
+                        {
+                            "goalName": "Jake: Man’s not hot",
+                            "children": []
+                        },
+                        {
+                            "goalName": "Liam: Naruto (book is an abstract term)",
+                            "children": [
+                                {
+                                    "goalName": "Saturdays with the boys",
+                                    "children": []
+                                },
+                                {
+                                    "goalName": "The Handmommy’s Tail",
+                                    "children": []
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "goalGroupName": "Liam's Goals",
+            "children": [
+                {
+                    "goalName": "Pick up some tutees"
+                }
+            ]
+        },
+        {
+            "goalGroupName": "Jake's Goals",
+            "children": [
+                {
+                    "goalName": "Figure out Penn Bucket"
+                }
+            ]
+        },
+        {
+            "goalGroupName": "Brian's Goals",
+            "children": []
+        }
+    ],
+    "goals": [
+        {
+            "listOwner": "Jake",
+            "elements": [
+                "asdfasdf",
+                "asddd",
+                "test goal",
+                "test goal",
+                "test goal",
+                "asdfasdf",
+                "asldfjasdflasdfl;asdf",
+                "lll"
+            ]
+        },
+        {
+            "listOwner": "Liam",
+            "elements": [
+                "3r34",
+                "Asdfasd",
+                "sasdfadf",
+                "111111",
+                "test goal",
+                "GALSDFAS",
+                "sfasdf"
+            ]
+        },
+        {
+            "listOwner": "Brian",
+            "elements": [
+                "0a9wieuh",
+                "test goal",
+                "asdfasdf",
+                "3o3oo3o",
+                "adsfasdf",
+                "I sucked peen today",
+                "adfasdf"
+            ]
+        }
+    ]
+}
