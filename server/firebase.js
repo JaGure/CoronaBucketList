@@ -57,3 +57,10 @@ const addNewGoalGroupToBucketList = (goalGroupName) => {
     bucketListWriter.addNewGoalGroupToBucketList(bucketList, goalGroupName, updateBucketList)
   })
 }
+
+module.exports = {
+  getBucketList: getBucketList,
+  getGoalLists: getGoalLists,
+  addGoalToBucketList: addGoalToBucketList,
+  addNewGoalGroupToBucketList: addNewGoalGroupToBucketList
+}
