@@ -27,7 +27,7 @@ const getGoalLists = next => {
 // bucketList write functions (async)
 // actually updates the bucketList server side
 const updateBucketList = (newBucketList) => {
-  // passed error message, NOT bucketList
+  // passed error message (instead of bucketList)
   if (typeof(bucketList) === 'string') {
     console.log(bucketList)
     return
@@ -57,6 +57,10 @@ const addNewGoalGroupToBucketList = (goalGroupName) => {
     bucketListWriter.addNewGoalGroupToBucketList(bucketList, goalGroupName, updateBucketList)
   })
 }
+
+// goalList write functions (async)
+
+
 
 module.exports = {
   getBucketList: getBucketList,
