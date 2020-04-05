@@ -1,1 +1,41 @@
-{"goals":[{"listOwner":"Jake","elements":["asdfasdf","asddd","test goal","test goal","test goal","asdfasdf","asldfjasdflasdfl;asdf","lll"]},{"listOwner":"Liam","elements":["3r34","Asdfasd","sasdfadf","111111","test goal","GALSDFAS","sfasdf"]},{"listOwner":"Brian","elements":["0a9wieuh","test goal","asdfasdf","3o3oo3o","adsfasdf","I sucked peen today","adfasdf"]}]}
+{
+    "goals": [
+        {
+            "listOwner": "Jake",
+            "elements": [
+                "asdfasdf",
+                "asddd",
+                "test goal",
+                "test goal",
+                "test goal",
+                "asdfasdf",
+                "asldfjasdflasdfl;asdf",
+                "lll"
+            ]
+        },
+        {
+            "listOwner": "Liam",
+            "elements": [
+                "3r34",
+                "Asdfasd",
+                "sasdfadf",
+                "111111",
+                "test goal",
+                "GALSDFAS",
+                "sfasdf"
+            ]
+        },
+        {
+            "listOwner": "Brian",
+            "elements": [
+                "0a9wieuh",
+                "test goal",
+                "asdfasdf",
+                "3o3oo3o",
+                "adsfasdf",
+                "I sucked peen today",
+                "adfasdf"
+            ]
+        }
+    ]
+}
