@@ -1,12 +1,10 @@
-// finds where to and then inserts a new goal into the bucket list, returns new bucketList
+// finds where to and then inserts a new goal into the bucket list, passes new bucketList to callback function
 // location is array of ints representing which list to index into (keeps going to end of location arr)
-const addGoalToBucketList = (bucketList, goalName, location) => {
+const addGoalToBucketList = (bucketList, goalName, location, next) => {
     if (!Array.isArray(location)) {
-        console.log('Location Not An Array!')
-        return
+        next('Location Not An Array!')
     } else if (location.length < 1) {
-        console.log('Invalid Location Array!')
-        return
+        next('Invalid Location Array!')
     }
 
     // find where to insert (insertArray will always be a children array)
@@ -19,8 +17,7 @@ const addGoalToBucketList = (bucketList, goalName, location) => {
     // check if goal already exists in insertArray
     for (let i = 0; i < insertArray.length; i++) {
         if (insertArray[i].goalName === goalName) {
-            console.log('Goal Already Exists At This Location!')
-            return
+            next('Goal Already Exists At This Location!')
         }
     }
 
@@ -31,14 +28,14 @@ const addGoalToBucketList = (bucketList, goalName, location) => {
 
     insertArray.push(newGoal)
 
-    return bucketList
+    next(bucketList)
 }
 
-// appends a new goal group to the end of the bucket list, returns new bucketList
-const addNewGoalGroupToBucketList = (bucketList, goalGroupName) => {
+// appends a new goal group to the end of the bucket list, passes new bucketList to callback function
+const addNewGoalGroupToBucketList = (bucketList, goalGroupName, next) => {
     for (let i = 0; i < bucketList.length; i++) {
         if (bucketList[i].goalGroupName === goalGroupName) {
-            console.log('Attempted to add already existing goalGroup!')
+            next('Attempted to add already existing goalGroup!')
             return
         }
     }
@@ -49,7 +46,8 @@ const addNewGoalGroupToBucketList = (bucketList, goalGroupName) => {
     }
 
     bucketList.push(newGoalGroup)
-    updateBucketList(bucketList)
+    
+    next(bucketList)
 }
 
 module.exports = {
