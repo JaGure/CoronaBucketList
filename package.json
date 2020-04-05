@@ -2,7 +2,7 @@
   "name": "CoronaBucketList",
   "version": "1.0.0",
   "description": "",
-  "main": "server.js",
+  "main": "server/server.js",
   "scripts": {
     "start": "nodemon server-local/server-local.js",
     "prestart": "parcel build ./client/index.html",
