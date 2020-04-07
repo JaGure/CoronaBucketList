@@ -26,7 +26,7 @@ const getGoalLists = next => {
 
 // bucketList write functions (async)
 // actually updates the bucketList server side
-const updateBucketList = (newBucketList) => {
+const updateBucketList = newBucketList => {
   // passed error message (instead of bucketList)
   if (typeof(bucketList) === 'string') {
     console.log(bucketList)
