@@ -76,7 +76,7 @@ const GoalList = props => {
         setInputText('')
 
         // updates on the list on the backend
-        const request = new Request('/goal-lists', {
+        const request = new Request('/.netlify/functions/server/goal-lists', {
             method: 'POST', 
             body: JSON.stringify({listOwner: name, goalToAdd: inputText}),
             headers: { "Content-Type": "application/json" }
