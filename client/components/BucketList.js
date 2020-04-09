@@ -31,7 +31,7 @@ const BucketList = () => {
 
     // GET request to backend for bucket list
     const getBucketList = () => {
-        fetch('/bucket-list')
+        fetch('/.netlify/functions/server/bucket-list')
             .then(res => res.json())
             .then(
                 result => {

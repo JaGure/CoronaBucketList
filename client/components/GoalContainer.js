@@ -28,7 +28,7 @@ const GoalContainer = () => {
 
     // GET request to backend for goal lists
     const getGoalLists = () => {
-        fetch('/goal-lists')
+        fetch('/.netlify/functions/server/goal-lists')
             .then(res => res.json())
             .then(
                 result => {
