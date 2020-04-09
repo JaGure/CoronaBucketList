@@ -3,8 +3,10 @@
 const addGoalToBucketList = (bucketList, goalName, location, next) => {
     if (!Array.isArray(location)) {
         next('Location Not An Array!')
+        return
     } else if (location.length < 1) {
         next('Invalid Location Array!')
+        return
     }
 
     // find where to insert (insertArray will always be a children array)
@@ -18,6 +20,7 @@ const addGoalToBucketList = (bucketList, goalName, location, next) => {
     for (let i = 0; i < insertArray.length; i++) {
         if (insertArray[i].goalName === goalName) {
             next('Goal Already Exists At This Location!')
+            return
         }
     }
 
