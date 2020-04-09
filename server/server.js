@@ -2,8 +2,7 @@
 const express = require('express')
 const path = require('path')
 const bodyParser = require('body-parser')
-const bucketListParser = require('../server-local/parsers-local/bucketListParser')
-const goalListsParser = require('../server-local/parsers-local/goalListsParser')
+const firebase = require('./firebase')
 const serverless = require('serverless-http'); 
 
 const app = express()
@@ -15,20 +14,19 @@ app.use(bodyParser.json());
 const router = express.Router()
 
 router.get('/bucket-list', (_, res) => {
-  bucketListParser.getBucketList(data => {
+  firebase.getBucketList(data => {
     res.send(data)
   })
 })
 
 router.get('/goal-lists', (_, res) => {
-  goalListsParser.getGoalLists(data => {
+  firebase.getGoalLists(data => {
     res.send(data)
   })
 })
 
 router.post('/goal-lists', (req, res) => {
-  console.log(req)
-  goalListsParser.setGoalLists(req.body.listOwner, req.body.goalToAdd, function(err) {
+  firebase.addGoalToGoalLists(req.body.listOwner, req.body.goalToAdd, function(err) {
     if(err) {
       console.log(err)
     } else {
