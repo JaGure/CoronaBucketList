@@ -1,5 +1,6 @@
 const admin = require('firebase-admin')
 const bucketListWriter = require('./writers/bucketListWriter')
+const goalListsWriter = require('./writers/goalListsWriter')
 
 // connecting
 const serviceAccount = require('./corona-bucket-list-firebase-adminsdk-9ragi-11247adb7d.json')
@@ -20,7 +21,7 @@ const getBucketList = next => {
 
 const getGoalLists = next => {
   db.ref('goals').once('value', function(snapshot) {
-    console.log(snapshot.val())
+    next(snapshot.val())
   })
 }
 
@@ -59,6 +60,29 @@ const addNewGoalGroupToBucketList = (goalGroupName) => {
 }
 
 // goalList write functions (async)
+const updateGoalLists = newGoalLists =>  {
+    // passed error message (instead of bucketList)
+    if (typeof(newGoalLists) === 'string') {
+      console.log(newGoalLists)
+      return
+    }
+  
+    // writes new goalLists to firebase
+    db.ref('/').update({
+      goals: newGoalLists
+    }, function(error) {
+      if (error) {
+        console.log('Write Failed :(')
+      } else {
+        console.log('Goal Lists Successfully Updated!')
+      }
+    })
+}
+
+// pulls the goal lists, creates an updated goal lists, then pushes the updated list to be written to the server
+const addGoalToGoalLists = (listOwner, goalToAdd) => {
+  getGoalLists(goalLists => goalListsWriter.addGoalToGoalLists(goalLists, listOwner, goalToAdd, updateGoalLists))
+}
 
 
 
@@ -66,5 +90,8 @@ module.exports = {
   getBucketList: getBucketList,
   getGoalLists: getGoalLists,
   addGoalToBucketList: addGoalToBucketList,
-  addNewGoalGroupToBucketList: addNewGoalGroupToBucketList
+  addNewGoalGroupToBucketList: addNewGoalGroupToBucketList,
+  addGoalToGoalLists: addGoalToGoalLists
 }
+
+addGoalToGoalLists('Brian', 'git gud')
