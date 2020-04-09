@@ -48,15 +48,11 @@ const updateBucketList = newBucketList => {
 
 // these create the new bucketlist, then pass it to the update function for server writing
 const addGoalToBucketList = (goalName, location) => {
-  getBucketList(function(bucketList) {
-    bucketListWriter.addGoalToBucketList(bucketList, goalName, location, updateBucketList)    
-  })
+  getBucketList(bucketList => bucketListWriter.addGoalToBucketList(bucketList, goalName, location, updateBucketList))
 }
 
 const addNewGoalGroupToBucketList = (goalGroupName) => {
-  getBucketList(function(bucketList) {
-    bucketListWriter.addNewGoalGroupToBucketList(bucketList, goalGroupName, updateBucketList)
-  })
+  getBucketList(bucketList => bucketListWriter.addNewGoalGroupToBucketList(bucketList, goalGroupName, updateBucketList))
 }
 
 // goalList write functions (async)
@@ -93,5 +89,3 @@ module.exports = {
   addNewGoalGroupToBucketList: addNewGoalGroupToBucketList,
   addGoalToGoalLists: addGoalToGoalLists
 }
-
-addGoalToGoalLists('Brian', 'git gud')
