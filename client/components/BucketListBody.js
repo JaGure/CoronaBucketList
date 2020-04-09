@@ -1,11 +1,12 @@
 import React from 'react'
 import s from 'styled-components'
+import { BUCKET_LIST_HOVER } from './constants'
 
 const ListElement = s.li`
     flex: auto;
 
     &:hover {
-        background-color: #e8f1ff;
+        background-color: ${BUCKET_LIST_HOVER};
     }
 `
 
