@@ -1,6 +1,6 @@
 const admin = require('firebase-admin')
-const bucketListWriter = require('./writers/bucketListWriter')
-const goalListsWriter = require('./writers/goalListsWriter')
+const bucketListWriter = require('../writers/bucketListWriter')
+const goalListsWriter = require('../writers/goalListsWriter')
 
 // connecting
 const serviceAccount = require('./corona-bucket-list-firebase-adminsdk-9ragi-11247adb7d.json')
