@@ -5,7 +5,7 @@ const ListElement = s.li`
     flex: auto;
 
     &:hover {
-        background-color: green;
+        background-color: #e8f1ff;
     }
 `
 
