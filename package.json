@@ -7,7 +7,7 @@
     "start": "nodemon server-local/server-local.js",
     "prestart": "parcel build ./client/index.html",
     "parcel:dev": "parcel ./client/index.html",
-    "build": "parcel build ./client/index.html && netlify-lambda build server --config ./config/webpack.functions.js src/lambda"
+    "build": "parcel build ./client/index.html && netlify-lambda build server --config /config/webpack.functions.js src/lambda"
   },
   "keywords": [],
   "author": "Jake Gurevitch",
