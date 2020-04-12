@@ -1,1 +1,13 @@
 This bois a gent: https://www.youtube.com/watch?v=P2tNNSsJfH4&list=PLei96ZX_m9sUDK-1b8fNXZgBnnb6wA7sB&index=3
+StYlEs: https://styled-components.com/docs/basics
+Flexbox: https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Flexible_Box_Layout/Basic_Concepts_of_Flexbox
+Better Express? (for  l8r): https://github.com/senchalabs/connect#middleware
+Express and Netlify: https://github.com/neverendingqs/netlify-express
+Doing Lambda Stuff with Express and Netlify: https://github.com/netlify/netlify-lambda#installation
+Getting Firebase to work with Netlify: https://github.com/netlify/netlify-lambda#webpack-configuration
+                                       https://github.com/netlify/netlify-lambda/issues/112
+                                       https://github.com/netlify/netlify-lambda/issues/64
+Firebase Admin Setup: https://firebase.google.com/docs/admin/setup
+                      https://firebase.google.com/docs/database/admin/start
+Firebase Read and Write: https://firebase.google.com/docs/database/web/read-and-write
+Parcel: https://parceljs.org/getting_started.html
